@@ -1,0 +1,58 @@
+﻿@using MTrackerAdminWeb.Models
+@model IEnumerable<Organization>
+@{
+    ViewData["Title"] = "Home page";
+     Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<div class="main-panel">
+          <div class="content-wrapper">
+            <div class="page-header">
+<div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Organization Details</h4>
+                    <p class="card-description"> Add class <code>.table-striped</code>
+                    </p>
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th> Org.ID </th>
+                          <th> Org.Name </th>
+                          <th> Org.Email </th>
+                          <th> Org.Contact </th>
+                          <th> Org.Address </th>
+                          <th> GST </th>
+                          <th> State </th>
+                          <th> City </th>
+                          <th> ZIP </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        @if (Model == null)
+                        {
+                          <tr> <td colspan="3" class="text-center"> No data found.</td></tr>
+                         }
+                         @foreach (var p in Model)
+                         {
+                         <tr>
+                        <td>@p.OrgID</td>
+                        <td>@p.OrgName</td>
+                        <td>@p.OrgEmail</td>
+                        <td>@p.OrgContact</td>
+                        <td>@p.OrgAddress</td>
+                        <td>@p.GST</td>
+                        <td>@p.State</td>
+                        <td>@p.City</td>
+                        <td>@p.Zip</td>
+
+                        </tr>
+                         }
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              </div>
+              </div>
+              </div>
