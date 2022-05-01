@@ -39,18 +39,18 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtOrgName = new System.Windows.Forms.TextBox();
+            this.txtOrgEmail = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.txtOrgCon = new System.Windows.Forms.TextBox();
+            this.txtConPass = new System.Windows.Forms.TextBox();
+            this.txtGst = new System.Windows.Forms.TextBox();
+            this.txtZip = new System.Windows.Forms.TextBox();
+            this.txtAdd = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comState = new System.Windows.Forms.ComboBox();
+            this.comCity = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -150,62 +150,62 @@
             this.label10.TabIndex = 9;
             this.label10.Text = "Confirm Password";
             // 
-            // textBox1
+            // txtOrgName
             // 
-            this.textBox1.Location = new System.Drawing.Point(197, 135);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 27);
-            this.textBox1.TabIndex = 10;
+            this.txtOrgName.Location = new System.Drawing.Point(197, 135);
+            this.txtOrgName.Name = "txtOrgName";
+            this.txtOrgName.Size = new System.Drawing.Size(187, 27);
+            this.txtOrgName.TabIndex = 10;
             // 
-            // textBox2
+            // txtOrgEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(200, 220);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(187, 27);
-            this.textBox2.TabIndex = 11;
+            this.txtOrgEmail.Location = new System.Drawing.Point(200, 220);
+            this.txtOrgEmail.Name = "txtOrgEmail";
+            this.txtOrgEmail.Size = new System.Drawing.Size(187, 27);
+            this.txtOrgEmail.TabIndex = 11;
             // 
-            // textBox3
+            // txtPass
             // 
-            this.textBox3.Location = new System.Drawing.Point(202, 263);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(187, 27);
-            this.textBox3.TabIndex = 12;
+            this.txtPass.Location = new System.Drawing.Point(202, 263);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(187, 27);
+            this.txtPass.TabIndex = 12;
             // 
-            // textBox4
+            // txtOrgCon
             // 
-            this.textBox4.Location = new System.Drawing.Point(198, 176);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(187, 27);
-            this.textBox4.TabIndex = 13;
+            this.txtOrgCon.Location = new System.Drawing.Point(198, 176);
+            this.txtOrgCon.Name = "txtOrgCon";
+            this.txtOrgCon.Size = new System.Drawing.Size(187, 27);
+            this.txtOrgCon.TabIndex = 13;
             // 
-            // textBox5
+            // txtConPass
             // 
-            this.textBox5.Location = new System.Drawing.Point(205, 306);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(187, 27);
-            this.textBox5.TabIndex = 14;
+            this.txtConPass.Location = new System.Drawing.Point(205, 306);
+            this.txtConPass.Name = "txtConPass";
+            this.txtConPass.Size = new System.Drawing.Size(187, 27);
+            this.txtConPass.TabIndex = 14;
             // 
-            // textBox6
+            // txtGst
             // 
-            this.textBox6.Location = new System.Drawing.Point(535, 303);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(187, 27);
-            this.textBox6.TabIndex = 19;
+            this.txtGst.Location = new System.Drawing.Point(535, 303);
+            this.txtGst.Name = "txtGst";
+            this.txtGst.Size = new System.Drawing.Size(187, 27);
+            this.txtGst.TabIndex = 19;
             // 
-            // textBox8
+            // txtZip
             // 
-            this.textBox8.Location = new System.Drawing.Point(535, 260);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(187, 27);
-            this.textBox8.TabIndex = 17;
+            this.txtZip.Location = new System.Drawing.Point(535, 260);
+            this.txtZip.Name = "txtZip";
+            this.txtZip.Size = new System.Drawing.Size(187, 27);
+            this.txtZip.TabIndex = 17;
             // 
-            // textBox10
+            // txtAdd
             // 
-            this.textBox10.Location = new System.Drawing.Point(532, 132);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(187, 27);
-            this.textBox10.TabIndex = 15;
+            this.txtAdd.Location = new System.Drawing.Point(532, 132);
+            this.txtAdd.Multiline = true;
+            this.txtAdd.Name = "txtAdd";
+            this.txtAdd.Size = new System.Drawing.Size(187, 27);
+            this.txtAdd.TabIndex = 15;
             // 
             // button1
             // 
@@ -216,6 +216,7 @@
             this.button1.TabIndex = 20;
             this.button1.Text = "Register";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -226,22 +227,23 @@
             this.button2.TabIndex = 21;
             this.button2.Text = "Clear";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // comboBox1
+            // comState
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(534, 181);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(182, 28);
-            this.comboBox1.TabIndex = 22;
+            this.comState.FormattingEnabled = true;
+            this.comState.Location = new System.Drawing.Point(534, 181);
+            this.comState.Name = "comState";
+            this.comState.Size = new System.Drawing.Size(182, 28);
+            this.comState.TabIndex = 22;
             // 
-            // comboBox2
+            // comCity
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(534, 220);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(182, 28);
-            this.comboBox2.TabIndex = 23;
+            this.comCity.FormattingEnabled = true;
+            this.comCity.Location = new System.Drawing.Point(534, 220);
+            this.comCity.Name = "comCity";
+            this.comCity.Size = new System.Drawing.Size(182, 28);
+            this.comCity.TabIndex = 23;
             // 
             // pictureBox1
             // 
@@ -271,18 +273,18 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comCity);
+            this.Controls.Add(this.comState);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtGst);
+            this.Controls.Add(this.txtZip);
+            this.Controls.Add(this.txtAdd);
+            this.Controls.Add(this.txtConPass);
+            this.Controls.Add(this.txtOrgCon);
+            this.Controls.Add(this.txtPass);
+            this.Controls.Add(this.txtOrgEmail);
+            this.Controls.Add(this.txtOrgName);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -298,6 +300,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -316,18 +319,18 @@
         private Label label8;
         private Label label9;
         private Label label10;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox8;
-        private TextBox textBox10;
+        private TextBox txtOrgName;
+        private TextBox txtOrgEmail;
+        private TextBox txtPass;
+        private TextBox txtOrgCon;
+        private TextBox txtConPass;
+        private TextBox txtGst;
+        private TextBox txtZip;
+        private TextBox txtAdd;
         private Button button1;
         private Button button2;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private ComboBox comState;
+        private ComboBox comCity;
         private PictureBox pictureBox1;
         private Button button3;
     }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 
 namespace MTrackerDesktop
@@ -31,6 +33,10 @@ namespace MTrackerDesktop
                 MessageBox.Show(textBox1, "MTrackerDesktop Demo app");
                 MessageBox.Show(textBox3, "MTrackerDesktop Demo app");
             }
+
+            
+           
+           
         }
 
         private void textBox1_Validating(object sender, CancelEventArgs e)
