@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -39,39 +40,39 @@ namespace MTrackerDesktop
                 MessageBox.Show("Please Enter Email", "Required Feild Validation");
                 return;
             }
-            if (txtOrgPass.Text == String.Empty)
+            if (txtPass.Text == String.Empty)
             {
                 MessageBox.Show("Please Enter Password", "Required Feild Validation");
                 return;
             }
-            if (txtOrgAdd.Text == String.Empty)
+            if (txtAdd.Text == String.Empty)
             {
                 MessageBox.Show("Please Enter Address", "Required Feild Validation");
                 return;
             }
-            if (drpOrgCity.Text == String.Empty)
+            if (comCity.Text == String.Empty)
             {
                 MessageBox.Show("Please Select City", "Required Feild Validation");
                 return;
             }
-            if (drpOrgState.Text == String.Empty)
+            if (comState.Text == String.Empty)
             {
                 MessageBox.Show("Please Select State", "Required Feild Validation");
                 return;
             }
-            if (txtOrgZip.Text == String.Empty)
+            if (txtZip.Text == String.Empty)
             {
                 MessageBox.Show("Please Enter ZIP", "Required Feild Validation");
                 return;
             }
-            if (txtOrgGst.Text == String.Empty)
+            if (txtGst.Text == String.Empty)
             {
                 MessageBox.Show("Please Enter GST", "Required Feild Validation");
                 return;
             }
 
             //Password and Confirm pass check
-            if (txtOrgPass.Text != txtOrgConPass.Text)
+            if (txtPass.Text != txtOrgConPass.Text)
             {
                 MessageBox.Show("Password mismatched", "Required Feild Validation");
                 return;
@@ -84,19 +85,43 @@ namespace MTrackerDesktop
         private void clearcode()
         {
             txtOrgName.Text = "";
-            txtOrgAdd.Text = "";
+            txtAdd.Text = "";
             txtOrgEmail.Text = "";
-            txtOrgPass.Text = "";
+            txtPass.Text = "";
             txtOrgConPass.Text = "";
             txtOrgCon.Text = "";
-            drpOrgState.Text = "";
-            drpOrgCity.Text = "";
-            txtOrgZip.Text = "";
-            txtOrgGst.Text = "";
+            comState.Text = "";
+            comCity.Text = "";
+            txtZip.Text = "";
+            txtGst.Text = "";
         }
         private void button1_Click(object sender, EventArgs e)
         {
             ValidationnControl();
+
+            SqlConnection con = new SqlConnection(@"Persist Security Info = False; User ID = sa; Password = 7101; Initial Catalog = MTrackerDBWeb; Data Source = LAPTOP-22L160U3\SQLEXPRESS;");
+            SqlCommand cmd = new SqlCommand("OganizationInsert", con);
+            cmd.Parameters.AddWithValue("@orgName", txtOrgName.Text);
+            cmd.Parameters.AddWithValue("@orgEmail", txtOrgEmail.Text);
+            cmd.Parameters.AddWithValue("@password", txtPass.Text);
+            cmd.Parameters.AddWithValue("@orgContact", txtOrgCon.Text);
+            cmd.Parameters.AddWithValue("@orgAddress", txtAdd.Text);
+            cmd.Parameters.AddWithValue("@gst", txtGst.Text);
+            cmd.Parameters.AddWithValue("@state", comState.Text);
+            cmd.Parameters.AddWithValue("@city", comCity.Text);
+            cmd.Parameters.AddWithValue("@zip", txtZip.Text);
+            con.Open();
+            int i = cmd.ExecuteNonQuery();
+            con.Close();
+            if (i != 0)
+            {
+                MessageBox.Show("Data save succcessful");
+            }
+            else
+            {
+                MessageBox.Show("Oops!! Error Occured");
+            }
+
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -104,6 +129,11 @@ namespace MTrackerDesktop
         }
 
         private void drpOrgState_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
         {
 
         }

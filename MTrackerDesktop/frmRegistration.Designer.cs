@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistration));
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.drpOrgCity = new System.Windows.Forms.ComboBox();
-            this.drpOrgState = new System.Windows.Forms.ComboBox();
+            this.comCity = new System.Windows.Forms.ComboBox();
+            this.comState = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtOrgGst = new System.Windows.Forms.TextBox();
-            this.txtOrgZip = new System.Windows.Forms.TextBox();
-            this.txtOrgAdd = new System.Windows.Forms.TextBox();
+            this.txtGst = new System.Windows.Forms.TextBox();
+            this.txtZip = new System.Windows.Forms.TextBox();
+            this.txtAdd = new System.Windows.Forms.TextBox();
             this.txtOrgConPass = new System.Windows.Forms.TextBox();
             this.txtOrgCon = new System.Windows.Forms.TextBox();
-            this.txtOrgPass = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.txtOrgEmail = new System.Windows.Forms.TextBox();
             this.txtOrgName = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -53,7 +54,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
@@ -75,30 +78,30 @@
             this.pictureBox1.TabIndex = 48;
             this.pictureBox1.TabStop = false;
             // 
-            // drpOrgCity
+            // comCity
             // 
-            this.drpOrgCity.FormattingEnabled = true;
-            this.drpOrgCity.Items.AddRange(new object[] {
+            this.comCity.FormattingEnabled = true;
+            this.comCity.Items.AddRange(new object[] {
             "Asansol",
             "Durgapur"});
-            this.drpOrgCity.Location = new System.Drawing.Point(541, 244);
-            this.drpOrgCity.Name = "drpOrgCity";
-            this.drpOrgCity.Size = new System.Drawing.Size(182, 28);
-            this.drpOrgCity.TabIndex = 47;
-            this.drpOrgCity.Text = "---Choose Option---";
-            this.drpOrgCity.SelectedIndexChanged += new System.EventHandler(this.drpOrgCity_SelectedIndexChanged);
+            this.comCity.Location = new System.Drawing.Point(541, 244);
+            this.comCity.Name = "comCity";
+            this.comCity.Size = new System.Drawing.Size(182, 28);
+            this.comCity.TabIndex = 47;
+            this.comCity.Text = "---Choose Option---";
+            this.comCity.SelectedIndexChanged += new System.EventHandler(this.drpOrgCity_SelectedIndexChanged);
             // 
-            // drpOrgState
+            // comState
             // 
-            this.drpOrgState.FormattingEnabled = true;
-            this.drpOrgState.Items.AddRange(new object[] {
+            this.comState.FormattingEnabled = true;
+            this.comState.Items.AddRange(new object[] {
             "West Bengal"});
-            this.drpOrgState.Location = new System.Drawing.Point(541, 205);
-            this.drpOrgState.Name = "drpOrgState";
-            this.drpOrgState.Size = new System.Drawing.Size(182, 28);
-            this.drpOrgState.TabIndex = 46;
-            this.drpOrgState.Text = "---Choose Option---";
-            this.drpOrgState.SelectedIndexChanged += new System.EventHandler(this.drpOrgState_SelectedIndexChanged);
+            this.comState.Location = new System.Drawing.Point(541, 205);
+            this.comState.Name = "comState";
+            this.comState.Size = new System.Drawing.Size(182, 28);
+            this.comState.TabIndex = 46;
+            this.comState.Text = "---Choose Option---";
+            this.comState.SelectedIndexChanged += new System.EventHandler(this.drpOrgState_SelectedIndexChanged);
             // 
             // button2
             // 
@@ -122,27 +125,27 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtOrgGst
+            // txtGst
             // 
-            this.txtOrgGst.Location = new System.Drawing.Point(542, 327);
-            this.txtOrgGst.Name = "txtOrgGst";
-            this.txtOrgGst.Size = new System.Drawing.Size(187, 27);
-            this.txtOrgGst.TabIndex = 43;
+            this.txtGst.Location = new System.Drawing.Point(542, 327);
+            this.txtGst.Name = "txtGst";
+            this.txtGst.Size = new System.Drawing.Size(187, 27);
+            this.txtGst.TabIndex = 43;
             // 
-            // txtOrgZip
+            // txtZip
             // 
-            this.txtOrgZip.Location = new System.Drawing.Point(542, 284);
-            this.txtOrgZip.Name = "txtOrgZip";
-            this.txtOrgZip.Size = new System.Drawing.Size(187, 27);
-            this.txtOrgZip.TabIndex = 42;
+            this.txtZip.Location = new System.Drawing.Point(542, 284);
+            this.txtZip.Name = "txtZip";
+            this.txtZip.Size = new System.Drawing.Size(187, 27);
+            this.txtZip.TabIndex = 42;
             // 
-            // txtOrgAdd
+            // txtAdd
             // 
-            this.txtOrgAdd.Location = new System.Drawing.Point(539, 156);
-            this.txtOrgAdd.Multiline = true;
-            this.txtOrgAdd.Name = "txtOrgAdd";
-            this.txtOrgAdd.Size = new System.Drawing.Size(187, 27);
-            this.txtOrgAdd.TabIndex = 41;
+            this.txtAdd.Location = new System.Drawing.Point(539, 156);
+            this.txtAdd.Multiline = true;
+            this.txtAdd.Name = "txtAdd";
+            this.txtAdd.Size = new System.Drawing.Size(187, 27);
+            this.txtAdd.TabIndex = 41;
             // 
             // txtOrgConPass
             // 
@@ -159,13 +162,13 @@
             this.txtOrgCon.Size = new System.Drawing.Size(187, 27);
             this.txtOrgCon.TabIndex = 39;
             // 
-            // txtOrgPass
+            // txtPass
             // 
-            this.txtOrgPass.Location = new System.Drawing.Point(209, 287);
-            this.txtOrgPass.Name = "txtOrgPass";
-            this.txtOrgPass.PasswordChar = '*';
-            this.txtOrgPass.Size = new System.Drawing.Size(187, 27);
-            this.txtOrgPass.TabIndex = 38;
+            this.txtPass.Location = new System.Drawing.Point(209, 287);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
+            this.txtPass.Size = new System.Drawing.Size(187, 27);
+            this.txtPass.TabIndex = 38;
             // 
             // txtOrgEmail
             // 
@@ -271,6 +274,10 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "Org Name";
             // 
+            // bindingSource1
+            // 
+            this.bindingSource1.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
+            // 
             // frmRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -278,16 +285,16 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.drpOrgCity);
-            this.Controls.Add(this.drpOrgState);
+            this.Controls.Add(this.comCity);
+            this.Controls.Add(this.comState);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtOrgGst);
-            this.Controls.Add(this.txtOrgZip);
-            this.Controls.Add(this.txtOrgAdd);
+            this.Controls.Add(this.txtGst);
+            this.Controls.Add(this.txtZip);
+            this.Controls.Add(this.txtAdd);
             this.Controls.Add(this.txtOrgConPass);
             this.Controls.Add(this.txtOrgCon);
-            this.Controls.Add(this.txtOrgPass);
+            this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtOrgEmail);
             this.Controls.Add(this.txtOrgName);
             this.Controls.Add(this.label10);
@@ -303,6 +310,7 @@
             this.Name = "frmRegistration";
             this.Text = "frmRegistration";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,16 +320,16 @@
 
         private Button button3;
         private PictureBox pictureBox1;
-        private ComboBox drpOrgCity;
-        private ComboBox drpOrgState;
+        private ComboBox comCity;
+        private ComboBox comState;
         private Button button2;
         private Button button1;
-        private TextBox txtOrgGst;
-        private TextBox txtOrgZip;
-        private TextBox txtOrgAdd;
+        private TextBox txtGst;
+        private TextBox txtZip;
+        private TextBox txtAdd;
         private TextBox txtOrgConPass;
         private TextBox txtOrgCon;
-        private TextBox txtOrgPass;
+        private TextBox txtPass;
         private TextBox txtOrgEmail;
         private TextBox txtOrgName;
         private Label label10;
@@ -334,5 +342,6 @@
         private Label label3;
         private Label label2;
         private Label label1;
+        private BindingSource bindingSource1;
     }
 }

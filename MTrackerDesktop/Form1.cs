@@ -46,7 +46,7 @@ namespace MTrackerDesktop
         private void button1_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Persist Security Info = False; User ID = sa; Password = 7101; Initial Catalog = MTrackerDBWeb; Data Source = LAPTOP - 22L160U3\\SQLEXPRESS;");
-            SqlCommand cmd = new SqlCommand("spname", con);
+            SqlCommand cmd = new SqlCommand("OganizationInsert", con);
             cmd.Parameters.AddWithValue("@OrgName",txtOrgName.Text);
             cmd.Parameters.AddWithValue("@OrgEmail", txtOrgEmail.Text);
             cmd.Parameters.AddWithValue("@Password", txtPass.Text);
