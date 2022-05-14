@@ -98,10 +98,16 @@ namespace MTrackerDesktop
         private void button1_Click(object sender, EventArgs e)
         {
             ValidationnControl();
+            InsertOganizationInsertData();
+        }
 
+        private void InsertOganizationInsertData()
+        {
             SqlConnection con = new SqlConnection(@"Persist Security Info = False; User ID = sa; Password = 7101; Initial Catalog = MTrackerDBWeb; Data Source = LAPTOP-22L160U3\SQLEXPRESS;");
-            SqlCommand cmd = new SqlCommand("OganizationInsert", con);
-            cmd.Parameters.AddWithValue("@orgName", txtOrgName.Text);
+            SqlCommand cmd = new SqlCommand("OganizationInsert1", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@OrgName", txtOrgName.Text);
             cmd.Parameters.AddWithValue("@orgEmail", txtOrgEmail.Text);
             cmd.Parameters.AddWithValue("@password", txtPass.Text);
             cmd.Parameters.AddWithValue("@orgContact", txtOrgCon.Text);
@@ -110,6 +116,7 @@ namespace MTrackerDesktop
             cmd.Parameters.AddWithValue("@state", comState.Text);
             cmd.Parameters.AddWithValue("@city", comCity.Text);
             cmd.Parameters.AddWithValue("@zip", txtZip.Text);
+
             con.Open();
             int i = cmd.ExecuteNonQuery();
             con.Close();
@@ -121,7 +128,6 @@ namespace MTrackerDesktop
             {
                 MessageBox.Show("Oops!! Error Occured");
             }
-
         }
         private void button2_Click(object sender, EventArgs e)
         {
