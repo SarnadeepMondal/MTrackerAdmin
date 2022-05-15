@@ -9,7 +9,7 @@ namespace MTrackerDesktop
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmRegistration());
+            Application.Run(new AddProduct());
         }
     }
 }
