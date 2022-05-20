@@ -50,14 +50,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.itmvaluation = new System.Windows.Forms.TextBox();
+            this.fundclm = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.interestamnt = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.netsttlmntamnt = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -120,6 +120,7 @@
             // itmdesc
             // 
             this.itmdesc.Location = new System.Drawing.Point(686, 149);
+            this.itmdesc.Multiline = true;
             this.itmdesc.Name = "itmdesc";
             this.itmdesc.Size = new System.Drawing.Size(179, 27);
             this.itmdesc.TabIndex = 55;
@@ -188,6 +189,7 @@
             // owneradd
             // 
             this.owneradd.Location = new System.Drawing.Point(434, 33);
+            this.owneradd.Multiline = true;
             this.owneradd.Name = "owneradd";
             this.owneradd.Size = new System.Drawing.Size(179, 27);
             this.owneradd.TabIndex = 63;
@@ -256,20 +258,20 @@
             this.label9.TabIndex = 61;
             this.label9.Text = "Item Valuation";
             // 
-            // textBox1
+            // itmvaluation
             // 
-            this.textBox1.Location = new System.Drawing.Point(274, 253);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 27);
-            this.textBox1.TabIndex = 62;
+            this.itmvaluation.Location = new System.Drawing.Point(274, 253);
+            this.itmvaluation.Name = "itmvaluation";
+            this.itmvaluation.Size = new System.Drawing.Size(168, 27);
+            this.itmvaluation.TabIndex = 62;
             // 
-            // textBox2
+            // fundclm
             // 
-            this.textBox2.Location = new System.Drawing.Point(274, 307);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 27);
-            this.textBox2.TabIndex = 64;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.fundclm.Location = new System.Drawing.Point(274, 307);
+            this.fundclm.Name = "fundclm";
+            this.fundclm.Size = new System.Drawing.Size(168, 27);
+            this.fundclm.TabIndex = 64;
+            this.fundclm.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label10
             // 
@@ -281,12 +283,12 @@
             this.label10.Text = "Fund Claim against Item";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
-            // textBox3
+            // interestamnt
             // 
-            this.textBox3.Location = new System.Drawing.Point(686, 254);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(179, 27);
-            this.textBox3.TabIndex = 66;
+            this.interestamnt.Location = new System.Drawing.Point(686, 254);
+            this.interestamnt.Name = "interestamnt";
+            this.interestamnt.Size = new System.Drawing.Size(179, 27);
+            this.interestamnt.TabIndex = 66;
             // 
             // label11
             // 
@@ -313,13 +315,13 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(179, 27);
             this.dateTimePicker2.TabIndex = 68;
             // 
-            // textBox4
+            // netsttlmntamnt
             // 
-            this.textBox4.Location = new System.Drawing.Point(487, 360);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(378, 27);
-            this.textBox4.TabIndex = 70;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.netsttlmntamnt.Location = new System.Drawing.Point(487, 360);
+            this.netsttlmntamnt.Name = "netsttlmntamnt";
+            this.netsttlmntamnt.Size = new System.Drawing.Size(378, 27);
+            this.netsttlmntamnt.TabIndex = 70;
+            this.netsttlmntamnt.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label13
             // 
@@ -337,15 +339,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(924, 629);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.netsttlmntamnt);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.interestamnt);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.fundclm);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.itmvaluation);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -394,14 +396,14 @@
         private Button button2;
         private TextBox owneridproof;
         private Label label9;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox itmvaluation;
+        private TextBox fundclm;
         private Label label10;
-        private TextBox textBox3;
+        private TextBox interestamnt;
         private Label label11;
         private Label label12;
         private DateTimePicker dateTimePicker2;
-        private TextBox textBox4;
+        private TextBox netsttlmntamnt;
         private Label label13;
     }
 }
