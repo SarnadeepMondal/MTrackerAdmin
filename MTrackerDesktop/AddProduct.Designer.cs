@@ -43,24 +43,29 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.owneradd = new System.Windows.Forms.TextBox();
-            this.ownercon = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.ownername = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.itmvaluation = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.itmvaluation = new System.Windows.Forms.TextBox();
-            this.fundclm = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.interestamnt = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.netsttlmntamnt = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.interestamnt = new System.Windows.Forms.NumericUpDown();
+            this.fundclm = new System.Windows.Forms.NumericUpDown();
+            this.netsttlmntamnt = new System.Windows.Forms.NumericUpDown();
+            this.ownercon = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.itmvaluation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.interestamnt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fundclm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.netsttlmntamnt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ownercon)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -144,11 +149,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.ownercon);
             this.groupBox1.Controls.Add(this.owneridproof);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.owneradd);
-            this.groupBox1.Controls.Add(this.ownercon);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.ownername);
             this.groupBox1.Controls.Add(this.label5);
@@ -194,13 +199,6 @@
             this.owneradd.Size = new System.Drawing.Size(179, 27);
             this.owneradd.TabIndex = 63;
             // 
-            // ownercon
-            // 
-            this.ownercon.Location = new System.Drawing.Point(110, 84);
-            this.ownercon.Name = "ownercon";
-            this.ownercon.Size = new System.Drawing.Size(168, 27);
-            this.ownercon.TabIndex = 62;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -226,6 +224,13 @@
             this.label5.TabIndex = 59;
             this.label5.Text = "Name";
             this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // itmvaluation
+            // 
+            this.itmvaluation.Location = new System.Drawing.Point(274, 258);
+            this.itmvaluation.Name = "itmvaluation";
+            this.itmvaluation.Size = new System.Drawing.Size(168, 27);
+            this.itmvaluation.TabIndex = 67;
             // 
             // button1
             // 
@@ -258,21 +263,6 @@
             this.label9.TabIndex = 61;
             this.label9.Text = "Item Valuation";
             // 
-            // itmvaluation
-            // 
-            this.itmvaluation.Location = new System.Drawing.Point(274, 253);
-            this.itmvaluation.Name = "itmvaluation";
-            this.itmvaluation.Size = new System.Drawing.Size(168, 27);
-            this.itmvaluation.TabIndex = 62;
-            // 
-            // fundclm
-            // 
-            this.fundclm.Location = new System.Drawing.Point(274, 307);
-            this.fundclm.Name = "fundclm";
-            this.fundclm.Size = new System.Drawing.Size(168, 27);
-            this.fundclm.TabIndex = 64;
-            this.fundclm.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -283,17 +273,10 @@
             this.label10.Text = "Fund Claim against Item";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
-            // interestamnt
-            // 
-            this.interestamnt.Location = new System.Drawing.Point(686, 254);
-            this.interestamnt.Name = "interestamnt";
-            this.interestamnt.Size = new System.Drawing.Size(179, 27);
-            this.interestamnt.TabIndex = 66;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(487, 260);
+            this.label11.Location = new System.Drawing.Point(487, 308);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(113, 20);
             this.label11.TabIndex = 65;
@@ -302,7 +285,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(487, 313);
+            this.label12.Location = new System.Drawing.Point(487, 258);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(182, 20);
             this.label12.TabIndex = 67;
@@ -310,18 +293,10 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(686, 308);
+            this.dateTimePicker2.Location = new System.Drawing.Point(686, 253);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(179, 27);
             this.dateTimePicker2.TabIndex = 68;
-            // 
-            // netsttlmntamnt
-            // 
-            this.netsttlmntamnt.Location = new System.Drawing.Point(487, 360);
-            this.netsttlmntamnt.Name = "netsttlmntamnt";
-            this.netsttlmntamnt.Size = new System.Drawing.Size(378, 27);
-            this.netsttlmntamnt.TabIndex = 70;
-            this.netsttlmntamnt.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label13
             // 
@@ -333,6 +308,34 @@
             this.label13.Text = "Net Forecust of Settlement Amount  ---------------------------";
             this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
+            // interestamnt
+            // 
+            this.interestamnt.Location = new System.Drawing.Point(686, 306);
+            this.interestamnt.Name = "interestamnt";
+            this.interestamnt.Size = new System.Drawing.Size(176, 27);
+            this.interestamnt.TabIndex = 67;
+            // 
+            // fundclm
+            // 
+            this.fundclm.Location = new System.Drawing.Point(274, 308);
+            this.fundclm.Name = "fundclm";
+            this.fundclm.Size = new System.Drawing.Size(168, 27);
+            this.fundclm.TabIndex = 71;
+            // 
+            // netsttlmntamnt
+            // 
+            this.netsttlmntamnt.Location = new System.Drawing.Point(487, 358);
+            this.netsttlmntamnt.Name = "netsttlmntamnt";
+            this.netsttlmntamnt.Size = new System.Drawing.Size(378, 27);
+            this.netsttlmntamnt.TabIndex = 72;
+            // 
+            // ownercon
+            // 
+            this.ownercon.Location = new System.Drawing.Point(110, 85);
+            this.ownercon.Name = "ownercon";
+            this.ownercon.Size = new System.Drawing.Size(168, 27);
+            this.ownercon.TabIndex = 73;
+            // 
             // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -340,14 +343,14 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(924, 629);
             this.Controls.Add(this.netsttlmntamnt);
+            this.Controls.Add(this.fundclm);
+            this.Controls.Add(this.interestamnt);
+            this.Controls.Add(this.itmvaluation);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.interestamnt);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.fundclm);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.itmvaluation);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -368,6 +371,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.itmvaluation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.interestamnt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fundclm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.netsttlmntamnt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ownercon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,21 +397,21 @@
         private Label label8;
         private Label label7;
         private TextBox owneradd;
-        private TextBox ownercon;
         private Label label6;
         private TextBox ownername;
         private Button button1;
         private Button button2;
         private TextBox owneridproof;
         private Label label9;
-        private TextBox itmvaluation;
-        private TextBox fundclm;
         private Label label10;
-        private TextBox interestamnt;
         private Label label11;
         private Label label12;
         private DateTimePicker dateTimePicker2;
-        private TextBox netsttlmntamnt;
         private Label label13;
+        private NumericUpDown itmvaluation;
+        private NumericUpDown interestamnt;
+        private NumericUpDown fundclm;
+        private NumericUpDown netsttlmntamnt;
+        private NumericUpDown ownercon;
     }
 }

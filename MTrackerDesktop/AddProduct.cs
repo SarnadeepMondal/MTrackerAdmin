@@ -55,6 +55,10 @@ namespace MTrackerDesktop
 
         private void button1_Click(object sender, EventArgs e)
         {
+            InsertAddproduct();
+        }
+        private void InsertAddproduct()
+        {
             SqlConnection con = new SqlConnection(@"Persist Security Info = False; User ID = sa; Password = 7101; Initial Catalog = MTrackerDBWeb; Data Source = LAPTOP-22L160U3\SQLEXPRESS;");
             SqlCommand cmd = new SqlCommand("AddProductInsert", con);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -79,19 +83,24 @@ namespace MTrackerDesktop
             if (i != 0)
             {
                 MessageBox.Show("Data save succcessful");
+                clearcode();
             }
             else
             {
                 MessageBox.Show("Oops!! Error Occured");
             }
         }
-
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }
-
+        
         private void button2_Click(object sender, EventArgs e)
+        {
+
+            clearcode();
+        }
+        private void clearcode()
         {
             ownername.Text = "";
             owneradd.Text = "";
@@ -100,8 +109,12 @@ namespace MTrackerDesktop
             itmname.Text = "";
             itmdesc.Text = "";
             itmcata.Text = "";
+            itmvaluation.Text = "";
+            netsttlmntamnt.Text = "";
+            interestamnt.Text = "";
+            fundclm.Text = "";
             dateTimePicker1.Text = "";
-            
+            dateTimePicker2.Text = "";
         }
 
         private void label10_Click(object sender, EventArgs e)
