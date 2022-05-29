@@ -39,6 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ownercon = new System.Windows.Forms.NumericUpDown();
             this.owneridproof = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -58,14 +59,13 @@
             this.interestamnt = new System.Windows.Forms.NumericUpDown();
             this.fundclm = new System.Windows.Forms.NumericUpDown();
             this.netsttlmntamnt = new System.Windows.Forms.NumericUpDown();
-            this.ownercon = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ownercon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itmvaluation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.interestamnt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fundclm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.netsttlmntamnt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ownercon)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -166,6 +166,18 @@
             this.groupBox1.Text = "Owner Details";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter_1);
             // 
+            // ownercon
+            // 
+            this.ownercon.Location = new System.Drawing.Point(110, 85);
+            this.ownercon.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.ownercon.Name = "ownercon";
+            this.ownercon.Size = new System.Drawing.Size(168, 27);
+            this.ownercon.TabIndex = 73;
+            // 
             // owneridproof
             // 
             this.owneridproof.Location = new System.Drawing.Point(434, 87);
@@ -228,6 +240,11 @@
             // itmvaluation
             // 
             this.itmvaluation.Location = new System.Drawing.Point(274, 258);
+            this.itmvaluation.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
             this.itmvaluation.Name = "itmvaluation";
             this.itmvaluation.Size = new System.Drawing.Size(168, 27);
             this.itmvaluation.TabIndex = 67;
@@ -310,31 +327,55 @@
             // 
             // interestamnt
             // 
+            this.interestamnt.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
             this.interestamnt.Location = new System.Drawing.Point(686, 306);
+            this.interestamnt.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
             this.interestamnt.Name = "interestamnt";
+            this.interestamnt.ReadOnly = true;
             this.interestamnt.Size = new System.Drawing.Size(176, 27);
             this.interestamnt.TabIndex = 67;
+            this.interestamnt.ValueChanged += new System.EventHandler(this.interestamnt_ValueChanged);
             // 
             // fundclm
             // 
             this.fundclm.Location = new System.Drawing.Point(274, 308);
+            this.fundclm.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
             this.fundclm.Name = "fundclm";
             this.fundclm.Size = new System.Drawing.Size(168, 27);
             this.fundclm.TabIndex = 71;
+            this.fundclm.ValueChanged += new System.EventHandler(this.fundclm_ValueChanged);
             // 
             // netsttlmntamnt
             // 
+            this.netsttlmntamnt.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.netsttlmntamnt.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
             this.netsttlmntamnt.Location = new System.Drawing.Point(487, 358);
+            this.netsttlmntamnt.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
             this.netsttlmntamnt.Name = "netsttlmntamnt";
+            this.netsttlmntamnt.ReadOnly = true;
             this.netsttlmntamnt.Size = new System.Drawing.Size(378, 27);
             this.netsttlmntamnt.TabIndex = 72;
-            // 
-            // ownercon
-            // 
-            this.ownercon.Location = new System.Drawing.Point(110, 85);
-            this.ownercon.Name = "ownercon";
-            this.ownercon.Size = new System.Drawing.Size(168, 27);
-            this.ownercon.TabIndex = 73;
+            this.netsttlmntamnt.ValueChanged += new System.EventHandler(this.netsttlmntamnt_ValueChanged);
             // 
             // AddProduct
             // 
@@ -371,11 +412,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ownercon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itmvaluation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.interestamnt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fundclm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.netsttlmntamnt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ownercon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -136,5 +136,29 @@ namespace MTrackerDesktop
         {
 
         }
+
+        private void interestamnt_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void fundclm_ValueChanged(object sender, EventArgs e)
+        {
+            if (fundclm.Value <= interestamnt.Value)
+            {
+                var intst = (fundclm.Value / 100) * 3;
+                interestamnt.Value = intst;
+                netsttlmntamnt.Value = fundclm.Value + intst;
+            }
+            else
+            {
+                MessageBox.Show("Product valuation is Less");
+            }
+        }
+
+        private void netsttlmntamnt_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
