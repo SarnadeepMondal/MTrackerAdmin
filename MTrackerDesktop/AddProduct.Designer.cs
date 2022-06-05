@@ -59,6 +59,10 @@
             this.interestamnt = new System.Windows.Forms.NumericUpDown();
             this.fundclm = new System.Windows.Forms.NumericUpDown();
             this.netsttlmntamnt = new System.Windows.Forms.NumericUpDown();
+            this.intrstten = new System.Windows.Forms.NumericUpDown();
+            this.label14 = new System.Windows.Forms.Label();
+            this.tenamnt = new System.Windows.Forms.NumericUpDown();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ownercon)).BeginInit();
@@ -66,6 +70,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.interestamnt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fundclm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.netsttlmntamnt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.intrstten)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenamnt)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -158,7 +164,7 @@
             this.groupBox1.Controls.Add(this.ownername);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(38, 413);
+            this.groupBox1.Location = new System.Drawing.Point(40, 466);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(827, 141);
             this.groupBox1.TabIndex = 58;
@@ -248,11 +254,12 @@
             this.itmvaluation.Name = "itmvaluation";
             this.itmvaluation.Size = new System.Drawing.Size(168, 27);
             this.itmvaluation.TabIndex = 67;
+            this.itmvaluation.ValueChanged += new System.EventHandler(this.itmvaluation_ValueChanged);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Lime;
-            this.button1.Location = new System.Drawing.Point(741, 575);
+            this.button1.Location = new System.Drawing.Point(743, 628);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 39);
             this.button1.TabIndex = 59;
@@ -263,7 +270,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(590, 575);
+            this.button2.Location = new System.Drawing.Point(592, 628);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(121, 39);
             this.button2.TabIndex = 60;
@@ -314,11 +321,12 @@
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(179, 27);
             this.dateTimePicker2.TabIndex = 68;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(38, 360);
+            this.label13.Location = new System.Drawing.Point(38, 411);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(413, 20);
             this.label13.TabIndex = 69;
@@ -365,7 +373,7 @@
             0,
             0,
             0});
-            this.netsttlmntamnt.Location = new System.Drawing.Point(487, 358);
+            this.netsttlmntamnt.Location = new System.Drawing.Point(487, 409);
             this.netsttlmntamnt.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -377,12 +385,71 @@
             this.netsttlmntamnt.TabIndex = 72;
             this.netsttlmntamnt.ValueChanged += new System.EventHandler(this.netsttlmntamnt_ValueChanged);
             // 
+            // intrstten
+            // 
+            this.intrstten.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.intrstten.Location = new System.Drawing.Point(272, 356);
+            this.intrstten.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.intrstten.Name = "intrstten";
+            this.intrstten.ReadOnly = true;
+            this.intrstten.Size = new System.Drawing.Size(170, 27);
+            this.intrstten.TabIndex = 74;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(40, 358);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(103, 20);
+            this.label14.TabIndex = 73;
+            this.label14.Text = "Interest Tenior";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
+            // 
+            // tenamnt
+            // 
+            this.tenamnt.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.tenamnt.Location = new System.Drawing.Point(686, 356);
+            this.tenamnt.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.tenamnt.Name = "tenamnt";
+            this.tenamnt.ReadOnly = true;
+            this.tenamnt.Size = new System.Drawing.Size(176, 27);
+            this.tenamnt.TabIndex = 76;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(488, 360);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(107, 20);
+            this.label15.TabIndex = 75;
+            this.label15.Text = "Tenior Amount";
+            // 
             // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(924, 629);
+            this.ClientSize = new System.Drawing.Size(924, 690);
+            this.Controls.Add(this.tenamnt);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.intrstten);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.netsttlmntamnt);
             this.Controls.Add(this.fundclm);
             this.Controls.Add(this.interestamnt);
@@ -417,6 +484,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.interestamnt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fundclm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.netsttlmntamnt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.intrstten)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenamnt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -454,5 +523,9 @@
         private NumericUpDown fundclm;
         private NumericUpDown netsttlmntamnt;
         private NumericUpDown ownercon;
+        private NumericUpDown intrstten;
+        private Label label14;
+        private NumericUpDown tenamnt;
+        private Label label15;
     }
 }

@@ -13,6 +13,7 @@ namespace MTrackerDesktop
 {
     public partial class AddProduct : Form
     {
+
         public AddProduct()
         {
             InitializeComponent();
@@ -92,7 +93,7 @@ namespace MTrackerDesktop
         }
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-
+            calculation();
         }
         
         private void button2_Click(object sender, EventArgs e)
@@ -139,24 +140,50 @@ namespace MTrackerDesktop
 
         private void interestamnt_ValueChanged(object sender, EventArgs e)
         {
-            
+            calculation();
         }
 
         private void fundclm_ValueChanged(object sender, EventArgs e)
         {
-            if (fundclm.Value <= interestamnt.Value)
-            {
-                var intst = (fundclm.Value / 100) * 3;
-                interestamnt.Value = intst;
-                netsttlmntamnt.Value = fundclm.Value + intst;
-            }
-            else
-            {
-                MessageBox.Show("Product valuation is Less");
-            }
+            calculation();
+        }
+        public void calculation()
+        {
+            var intst = ((fundclm.Value / 100) * 3);
+
+            interestamnt.Value = intst;
+
+            DateTime startDate = Convert.ToDateTime(dateTimePicker1.Text);
+            DateTime endDate = Convert.ToDateTime(dateTimePicker2.Text);
+            int NoOfMonthCount = GetMonthDifference(startDate, endDate);
+
+            intst = intst * NoOfMonthCount;
+
+            netsttlmntamnt.Value = fundclm.Value + intst;
+            intrstten.Text = Convert.ToString(NoOfMonthCount);
+            tenamnt.Text = Convert.ToString(intst);
+        }
+        private void netsttlmntamnt_ValueChanged(object sender, EventArgs e)
+        {
+            calculation();
         }
 
-        private void netsttlmntamnt_ValueChanged(object sender, EventArgs e)
+        private void itmvaluation_ValueChanged(object sender, EventArgs e)
+        {
+            calculation();
+        }
+
+        public int GetMonthDifference(DateTime startDate, DateTime endDate)
+        {
+            int monthsApart = 12 * (startDate.Year - endDate.Year) + startDate.Month - endDate.Month;
+            return Math.Abs(monthsApart);
+        }
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            calculation();
+        }
+
+        private void label14_Click(object sender, EventArgs e)
         {
 
         }
