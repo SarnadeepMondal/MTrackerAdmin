@@ -63,6 +63,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.tenamnt = new System.Windows.Forms.NumericUpDown();
             this.label15 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ownercon)).BeginInit();
@@ -440,12 +442,36 @@
             this.label15.TabIndex = 75;
             this.label15.Text = "Tenior Amount";
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Lime;
+            this.button3.Location = new System.Drawing.Point(746, 93);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(121, 39);
+            this.button3.TabIndex = 77;
+            this.button3.Text = "Log Out";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Lime;
+            this.button4.Location = new System.Drawing.Point(40, 628);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(129, 39);
+            this.button4.TabIndex = 78;
+            this.button4.Text = "Product Details";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(924, 690);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.tenamnt);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.intrstten);
@@ -527,5 +553,7 @@
         private Label label14;
         private NumericUpDown tenamnt;
         private Label label15;
+        private Button button3;
+        private Button button4;
     }
 }

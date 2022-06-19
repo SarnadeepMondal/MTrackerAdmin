@@ -25,28 +25,34 @@ namespace MTrackerDesktop
 
         }
 
+
         private void button1_Click_1(object sender, EventArgs e)
         {
-            //Login Button
-            if(ValidateChildren(ValidationConstraints.Enabled))
-            {
-                MessageBox.Show(textBox1, "MTrackerDesktop Demo app");
-                MessageBox.Show(textBox3, "MTrackerDesktop Demo app");
-            }
+                // Login Button
 
-            
-           
-           
-        }
+                SqlConnection con = new SqlConnection(@"Persist Security Info = False; User ID = sa; Password = 7101; Initial Catalog = MTrackerDBWeb; Data Source = LAPTOP-22L160U3\SQLEXPRESS;");
+                SqlCommand cmd = new SqlCommand();
+                string GetDetails = "Select * from Organization where OrgEmail='" + LogEmail.Text + "' and password ='" + LogPass.Text + "'";
+                SqlDataAdapter adapter = new SqlDataAdapter(GetDetails,con);
+                DataTable dt = new DataTable(); 
+                adapter.Fill(dt);
+                if(dt.Rows.Count == 1)
+                {
+                    AddProduct form = new AddProduct();
+                    this.Hide();
+                    form.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Login Credential Mismatch");
+                }
+
+            }
+          
 
         private void textBox1_Validating(object sender, CancelEventArgs e)
         {   //login Email
-            if(string.IsNullOrWhiteSpace(textBox1.Text))
-            {
-                e.Cancel = true;
-                textBox1.Focus();
-                errorProviderApp.SetError(textBox1,"Email is Required");
-            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -57,17 +63,13 @@ namespace MTrackerDesktop
 
         private void textBox3_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox3.Text))
-            {
-                e.Cancel = true;
-                textBox3.Focus();
-                errorProviderApp.SetError(textBox3, "Password is Required");
-            }
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             // Go to register button
+            
             frmRegistration form = new frmRegistration();
             form.Show();
         }

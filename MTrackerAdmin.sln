@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mtracker.Utility", "Mtracke
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MTrackerAdminWeb", "MTrackerAdminWeb\MTrackerAdminWeb.csproj", "{F707C977-D3E2-4450-8D25-70B8496B553C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTrackerDesktop", "MTrackerDesktop\MTrackerDesktop.csproj", "{6C5098EB-994E-4B06-9692-11802C88CF96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MTrackerDesktop", "MTrackerDesktop\MTrackerDesktop.csproj", "{6C5098EB-994E-4B06-9692-11802C88CF96}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{59EEBC05-3FC8-49A3-905F-DC68113CB5CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,8 @@ Global
 		{6C5098EB-994E-4B06-9692-11802C88CF96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C5098EB-994E-4B06-9692-11802C88CF96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C5098EB-994E-4B06-9692-11802C88CF96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59EEBC05-3FC8-49A3-905F-DC68113CB5CB}.Debug|Any CPU.ActiveCfg = Debug
+		{59EEBC05-3FC8-49A3-905F-DC68113CB5CB}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

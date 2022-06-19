@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogIn));
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LogPass = new System.Windows.Forms.TextBox();
+            this.LogEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -63,22 +63,22 @@
             this.pictureBox1.TabIndex = 48;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox3
+            // LogPass
             // 
-            this.textBox3.Location = new System.Drawing.Point(204, 208);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(187, 27);
-            this.textBox3.TabIndex = 38;
-            this.textBox3.Validating += new System.ComponentModel.CancelEventHandler(this.textBox3_Validating);
+            this.LogPass.Location = new System.Drawing.Point(204, 208);
+            this.LogPass.Name = "LogPass";
+            this.LogPass.PasswordChar = '*';
+            this.LogPass.Size = new System.Drawing.Size(187, 27);
+            this.LogPass.TabIndex = 38;
+            this.LogPass.Validating += new System.ComponentModel.CancelEventHandler(this.textBox3_Validating);
             // 
-            // textBox1
+            // LogEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(204, 159);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 27);
-            this.textBox1.TabIndex = 36;
-            this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
+            this.LogEmail.Location = new System.Drawing.Point(204, 159);
+            this.LogEmail.Name = "LogEmail";
+            this.LogEmail.Size = new System.Drawing.Size(187, 27);
+            this.LogEmail.TabIndex = 36;
+            this.LogEmail.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
             // 
             // label4
             // 
@@ -133,8 +133,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.LogPass);
+            this.Controls.Add(this.LogEmail);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -153,8 +153,8 @@
 
         private Button button3;
         private PictureBox pictureBox1;
-        private TextBox textBox3;
-        private TextBox textBox1;
+        private TextBox LogPass;
+        private TextBox LogEmail;
         private Label label4;
         private Label label1;
         private Button button1;

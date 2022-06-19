@@ -187,5 +187,22 @@ namespace MTrackerDesktop
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //logout button
+
+            this.Close();
+            LogIn inw = new LogIn();
+            inw.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //product details button
+            MasterData md = new MasterData();
+            md.Show();
+            this.Hide();
+        }
     }
 }
