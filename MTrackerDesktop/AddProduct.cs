@@ -204,5 +204,10 @@ namespace MTrackerDesktop
             md.Show();
             this.Hide();
         }
+
+        private void itmname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -39,6 +39,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.errorProviderApp = new System.Windows.Forms.ErrorProvider(this.components);
             this.Exitlogin = new System.Windows.Forms.Button();
+            this.remember = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderApp)).BeginInit();
             this.SuspendLayout();
@@ -46,7 +47,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Lime;
-            this.button3.Location = new System.Drawing.Point(35, 282);
+            this.button3.Location = new System.Drawing.Point(35, 296);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(149, 31);
             this.button3.TabIndex = 49;
@@ -78,7 +79,6 @@
             this.LogEmail.Name = "LogEmail";
             this.LogEmail.Size = new System.Drawing.Size(187, 27);
             this.LogEmail.TabIndex = 36;
-            this.LogEmail.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
             // 
             // label4
             // 
@@ -101,7 +101,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Lime;
-            this.button1.Location = new System.Drawing.Point(211, 282);
+            this.button1.Location = new System.Drawing.Point(211, 296);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(149, 31);
             this.button1.TabIndex = 50;
@@ -116,7 +116,7 @@
             // Exitlogin
             // 
             this.Exitlogin.BackColor = System.Drawing.Color.Red;
-            this.Exitlogin.Location = new System.Drawing.Point(384, 282);
+            this.Exitlogin.Location = new System.Drawing.Point(384, 296);
             this.Exitlogin.Name = "Exitlogin";
             this.Exitlogin.Size = new System.Drawing.Size(94, 29);
             this.Exitlogin.TabIndex = 51;
@@ -124,11 +124,22 @@
             this.Exitlogin.UseVisualStyleBackColor = false;
             this.Exitlogin.Click += new System.EventHandler(this.button2_Click);
             // 
+            // remember
+            // 
+            this.remember.AutoSize = true;
+            this.remember.Location = new System.Drawing.Point(206, 255);
+            this.remember.Name = "remember";
+            this.remember.Size = new System.Drawing.Size(129, 24);
+            this.remember.TabIndex = 52;
+            this.remember.Text = "Remember me";
+            this.remember.UseVisualStyleBackColor = true;
+            // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(543, 361);
+            this.Controls.Add(this.remember);
             this.Controls.Add(this.Exitlogin);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
@@ -142,6 +153,7 @@
             this.Name = "LogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogIn";
+            this.Load += new System.EventHandler(this.LogIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderApp)).EndInit();
             this.ResumeLayout(false);
@@ -160,5 +172,6 @@
         private Button button1;
         private ErrorProvider errorProviderApp;
         private Button Exitlogin;
+        private CheckBox remember;
     }
 }

@@ -26,11 +26,15 @@ namespace MTrackerDesktop
         private void MasterData_Load(object sender, EventArgs e)
         {
             //form load
+            FetchDetails();
+        }
+        public void FetchDetails()
+        {
             SqlConnection con = new SqlConnection(@"Persist Security Info = False; User ID = sa; Password = 7101; Initial Catalog = MTrackerDBWeb; Data Source = LAPTOP-22L160U3\SQLEXPRESS;");
             SqlCommand cmd = new SqlCommand("Select * from AddProduct", con);
             con.Open();
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable(); 
+            DataTable dt = new DataTable();
             adapter.Fill(dt);
             con.Close();
             dataGridView1.DataSource = dt;
@@ -53,6 +57,32 @@ namespace MTrackerDesktop
             AddProduct form = new AddProduct();
             form.Show();
             this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LogIn inw = new LogIn();
+            inw.Show();
+        }
+
+        private void Search_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Persist Security Info = False; User ID = sa; Password = 7101; Initial Catalog = MTrackerDBWeb; Data Source = LAPTOP-22L160U3\SQLEXPRESS;");
+            SqlCommand cmd = new SqlCommand("Select * from AddProduct where Item_Name='" + txtSearch.Text + "' or Item_Catagory='" + txtSearch.Text + "' ", con);
+            con.Open();
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+
+            adapter.Fill(dt);
+            con.Close();
+            dataGridView1.DataSource = dt;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FetchDetails();
         }
     }
 }
