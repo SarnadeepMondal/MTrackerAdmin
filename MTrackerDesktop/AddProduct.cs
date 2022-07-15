@@ -156,6 +156,11 @@ namespace MTrackerDesktop
             DateTime startDate = Convert.ToDateTime(dateTimePicker1.Text);
             DateTime endDate = Convert.ToDateTime(dateTimePicker2.Text);
             int NoOfMonthCount = GetMonthDifference(startDate, endDate);
+            int NoOfDayCount = endDate.Day- startDate.Day;
+            if(NoOfDayCount > 3)
+            {
+                NoOfMonthCount = NoOfMonthCount + 1;
+            }
 
             intst = intst * NoOfMonthCount;
 
@@ -206,6 +211,11 @@ namespace MTrackerDesktop
         }
 
         private void itmname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
         }
