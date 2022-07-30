@@ -39,6 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.OrgID = new System.Windows.Forms.TextBox();
             this.ownercon = new System.Windows.Forms.NumericUpDown();
             this.owneridproof = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -101,7 +102,7 @@
             this.itmname.Location = new System.Drawing.Point(274, 149);
             this.itmname.Name = "itmname";
             this.itmname.Size = new System.Drawing.Size(168, 27);
-            this.itmname.TabIndex = 51;
+            this.itmname.TabIndex = 0;
             this.itmname.TextChanged += new System.EventHandler(this.itmname_TextChanged);
             // 
             // label2
@@ -120,7 +121,7 @@
             this.itmcata.Location = new System.Drawing.Point(274, 204);
             this.itmcata.Name = "itmcata";
             this.itmcata.Size = new System.Drawing.Size(168, 28);
-            this.itmcata.TabIndex = 53;
+            this.itmcata.TabIndex = 1;
             // 
             // label3
             // 
@@ -137,7 +138,7 @@
             this.itmdesc.Multiline = true;
             this.itmdesc.Name = "itmdesc";
             this.itmdesc.Size = new System.Drawing.Size(179, 27);
-            this.itmdesc.TabIndex = 55;
+            this.itmdesc.TabIndex = 2;
             // 
             // label4
             // 
@@ -153,11 +154,12 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(686, 204);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(179, 27);
-            this.dateTimePicker1.TabIndex = 57;
+            this.dateTimePicker1.TabIndex = 5;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.OrgID);
             this.groupBox1.Controls.Add(this.ownercon);
             this.groupBox1.Controls.Add(this.owneridproof);
             this.groupBox1.Controls.Add(this.label8);
@@ -175,6 +177,15 @@
             this.groupBox1.Text = "Owner Details";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter_1);
             // 
+            // OrgID
+            // 
+            this.OrgID.Location = new System.Drawing.Point(683, 87);
+            this.OrgID.Name = "OrgID";
+            this.OrgID.Size = new System.Drawing.Size(125, 27);
+            this.OrgID.TabIndex = 79;
+            this.OrgID.Visible = false;
+            this.OrgID.TextChanged += new System.EventHandler(this.OrgID_TextChanged);
+            // 
             // ownercon
             // 
             this.ownercon.Location = new System.Drawing.Point(110, 85);
@@ -185,14 +196,14 @@
             0});
             this.ownercon.Name = "ownercon";
             this.ownercon.Size = new System.Drawing.Size(168, 27);
-            this.ownercon.TabIndex = 73;
+            this.ownercon.TabIndex = 9;
             // 
             // owneridproof
             // 
             this.owneridproof.Location = new System.Drawing.Point(434, 87);
             this.owneridproof.Name = "owneridproof";
             this.owneridproof.Size = new System.Drawing.Size(179, 27);
-            this.owneridproof.TabIndex = 66;
+            this.owneridproof.TabIndex = 10;
             // 
             // label8
             // 
@@ -208,9 +219,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(309, 36);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 20);
+            this.label7.Size = new System.Drawing.Size(63, 20);
             this.label7.TabIndex = 64;
-            this.label7.Text = "Addrtess";
+            this.label7.Text = "Address";
             // 
             // owneradd
             // 
@@ -218,7 +229,7 @@
             this.owneradd.Multiline = true;
             this.owneradd.Name = "owneradd";
             this.owneradd.Size = new System.Drawing.Size(179, 27);
-            this.owneradd.TabIndex = 63;
+            this.owneradd.TabIndex = 8;
             // 
             // label6
             // 
@@ -234,7 +245,7 @@
             this.ownername.Location = new System.Drawing.Point(110, 33);
             this.ownername.Name = "ownername";
             this.ownername.Size = new System.Drawing.Size(168, 27);
-            this.ownername.TabIndex = 60;
+            this.ownername.TabIndex = 7;
             // 
             // label5
             // 
@@ -256,7 +267,7 @@
             0});
             this.itmvaluation.Name = "itmvaluation";
             this.itmvaluation.Size = new System.Drawing.Size(168, 27);
-            this.itmvaluation.TabIndex = 67;
+            this.itmvaluation.TabIndex = 3;
             this.itmvaluation.ValueChanged += new System.EventHandler(this.itmvaluation_ValueChanged);
             // 
             // button1
@@ -323,7 +334,7 @@
             this.dateTimePicker2.Location = new System.Drawing.Point(686, 253);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(179, 27);
-            this.dateTimePicker2.TabIndex = 68;
+            this.dateTimePicker2.TabIndex = 6;
             this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // label13
@@ -365,7 +376,7 @@
             0});
             this.fundclm.Name = "fundclm";
             this.fundclm.Size = new System.Drawing.Size(168, 27);
-            this.fundclm.TabIndex = 71;
+            this.fundclm.TabIndex = 4;
             this.fundclm.ValueChanged += new System.EventHandler(this.fundclm_ValueChanged);
             // 
             // netsttlmntamnt
@@ -556,5 +567,6 @@
         private Label label15;
         private Button button3;
         private Button button4;
+        private TextBox OrgID;
     }
 }

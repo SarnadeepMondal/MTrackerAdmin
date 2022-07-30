@@ -19,6 +19,12 @@ namespace MTrackerDesktop
             InitializeComponent();
         }
 
+        public AddProduct(string org_id)
+        {
+            InitializeComponent();
+            OrgID.Text = org_id;
+        }
+
         private void AddProduct_Load(object sender, EventArgs e)
         {
 
@@ -64,7 +70,9 @@ namespace MTrackerDesktop
             SqlCommand cmd = new SqlCommand("AddProductInsert", con);
             cmd.CommandType = CommandType.StoredProcedure;
 
+            //cmd.Parameters.AddWithValue("@OrgID",);
             cmd.Parameters.AddWithValue("@Item_Name", itmname.Text);
+            cmd.Parameters.AddWithValue("@OrgId", OrgID.Text);
             cmd.Parameters.AddWithValue("@Item_Catagory", itmcata.Text);
             cmd.Parameters.AddWithValue("@Item_Description", itmdesc.Text);
             cmd.Parameters.AddWithValue("Date", dateTimePicker1.Text);
@@ -218,6 +226,11 @@ namespace MTrackerDesktop
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
+        }
+
+        private void OrgID_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

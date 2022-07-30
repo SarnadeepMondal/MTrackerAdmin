@@ -21,6 +21,10 @@ namespace MTrackerAdminWeb.Controllers
         {
             return View(dataContext.Organization);
         }
+        public IActionResult ContactUs()
+        {
+            return View();
+        }
 
 
         public IActionResult Privacy()

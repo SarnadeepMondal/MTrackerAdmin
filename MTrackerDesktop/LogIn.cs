@@ -46,12 +46,23 @@ namespace MTrackerDesktop
                 SqlConnection con = new SqlConnection(@"Persist Security Info = False; User ID = sa; Password = 7101; Initial Catalog = MTrackerDBWeb; Data Source = LAPTOP-22L160U3\SQLEXPRESS;");
                 SqlCommand cmd = new SqlCommand();
                 string GetDetails = "Select * from Organization where OrgEmail='" + LogEmail.Text + "' and password ='" + LogPass.Text + "'";
+                //string ID = "Select OrgID from Organization where OrgEmail='" + LogEmail.Text + "' and password ='" + LogPass.Text + "'";
                 SqlDataAdapter adapter = new SqlDataAdapter(GetDetails, con);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
+                string org_id = "";
+                if (dt.Rows.Count > 0)
+
+                    //org_id= Convert.ToString(dt.Rows[0].Field<string>("OrgID"));
+
+                foreach (DataRow row in dt.Rows)
+                {
+                        org_id = row["OrgID"].ToString();
+                }
+
                 if (dt.Rows.Count == 1)
                 {
-                    AddProduct form = new AddProduct();
+                    AddProduct form = new AddProduct(org_id);
                     this.Hide();
                     form.Show();
                 }

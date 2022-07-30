@@ -10,5 +10,6 @@ namespace MTrackerAdminWeb.Data
 
         }
         public DbSet<Organization> Organization { get; set; }
+        public DbSet<ContactUs> ContactUs { get; set; }
     }
 }
