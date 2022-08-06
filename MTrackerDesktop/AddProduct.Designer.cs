@@ -284,6 +284,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Red;
+            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button2.Location = new System.Drawing.Point(592, 628);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(121, 39);

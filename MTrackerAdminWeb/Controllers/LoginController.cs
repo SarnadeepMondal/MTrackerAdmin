@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MTrackerAdminWeb.Models;
 
 namespace MTrackerAdminWeb.Controllers
 {
@@ -8,6 +9,19 @@ namespace MTrackerAdminWeb.Controllers
         {
             return View();
         }
-       
+        [HttpPost]
+        public IActionResult Index(UsersAdmin Users)
+        {
+            if (Users.email == "Test@admin" && Users.password == "1234")
+            {
+                return RedirectToAction("Index","Home");
+            }
+            else
+            {
+                return RedirectToAction("Error");
+            }
+
+        }
+
     }
 }
