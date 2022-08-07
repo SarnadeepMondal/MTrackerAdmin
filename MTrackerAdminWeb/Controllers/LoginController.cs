@@ -12,15 +12,21 @@ namespace MTrackerAdminWeb.Controllers
         [HttpPost]
         public IActionResult Index(UsersAdmin Users)
         {
-            if (Users.email == "Test@admin" && Users.password == "1234")
+            #region Static Login From AppSettings
+
+            var builder = WebApplication.CreateBuilder();
+
+            if (Users.email == builder.Configuration.GetConnectionString("Username") 
+                && Users.password == builder.Configuration.GetConnectionString("Password"))
             {
-                return RedirectToAction("Index","Home");
+                return RedirectToAction("Index", "Home");
             }
             else
             {
                 return RedirectToAction("Error");
             }
 
+            #endregion End static Login From AppSettings
         }
 
     }
