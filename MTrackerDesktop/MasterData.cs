@@ -31,7 +31,7 @@ namespace MTrackerDesktop
         public void FetchDetails()
         {
             SqlConnection con = new SqlConnection(@"Persist Security Info = False; User ID = sa; Password = 7101; Initial Catalog = MTrackerDBWeb; Data Source = LAPTOP-22L160U3\SQLEXPRESS;");
-            SqlCommand cmd = new SqlCommand("Select * from AddProduct", con);
+            SqlCommand cmd = new SqlCommand("Select * from AddProduct Where Status=0", con);
             con.Open();
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -83,6 +83,23 @@ namespace MTrackerDesktop
         private void button4_Click(object sender, EventArgs e)
         {
             FetchDetails();
+        }
+
+        private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
+
+        private void Search_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Search", Search);
+        }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+           
+            Update obj = new Update();
+            obj.ShowDialog();
         }
     }
 }

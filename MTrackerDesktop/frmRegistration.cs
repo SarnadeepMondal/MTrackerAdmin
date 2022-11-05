@@ -103,6 +103,8 @@ namespace MTrackerDesktop
 
         private void InsertOganizationInsertData()
         {
+
+            DateTime dt = DateTime.Now.AddMonths(6);
             SqlConnection con = new SqlConnection(@"Persist Security Info = False; User ID = sa; Password = 7101; Initial Catalog = MTrackerDBWeb; Data Source = LAPTOP-22L160U3\SQLEXPRESS;");
             SqlCommand cmd = new SqlCommand("OganizationInsert1", con);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -116,6 +118,8 @@ namespace MTrackerDesktop
             cmd.Parameters.AddWithValue("@state", comState.Text);
             cmd.Parameters.AddWithValue("@city", comCity.Text);
             cmd.Parameters.AddWithValue("@zip", txtZip.Text);
+            cmd.Parameters.AddWithValue("@Reg_date", DateTime.Now);
+            cmd.Parameters.AddWithValue("@End_date", DateTime.Now.AddMonths(6));
 
             con.Open();
             int i = cmd.ExecuteNonQuery();

@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MasterData));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -38,15 +40,31 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.Search = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.update = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 182);
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dataGridView1.Location = new System.Drawing.Point(9, 166);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(1800, 327);
@@ -68,10 +86,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(9, 137);
+            this.label1.Font = new System.Drawing.Font("STZhongsong", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(744, 137);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 31);
+            this.label1.Size = new System.Drawing.Size(185, 26);
             this.label1.TabIndex = 51;
             this.label1.Text = "Product Details";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -92,7 +110,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Lime;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(1531, 685);
+            this.button2.Location = new System.Drawing.Point(1396, 684);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(149, 39);
             this.button2.TabIndex = 53;
@@ -113,28 +131,30 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(1372, 137);
+            this.txtSearch.Location = new System.Drawing.Point(1449, 134);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(308, 27);
             this.txtSearch.TabIndex = 79;
             // 
             // Search
             // 
-            this.Search.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Search.BackColor = System.Drawing.SystemColors.Control;
+            this.Search.BackgroundImage = global::MTrackerDesktop.Properties.Resources.loupe;
+            this.Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Search.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Search.Location = new System.Drawing.Point(1695, 136);
+            this.Search.Location = new System.Drawing.Point(1763, 127);
             this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(117, 29);
+            this.Search.Size = new System.Drawing.Size(46, 41);
             this.Search.TabIndex = 80;
-            this.Search.Text = "Search";
             this.Search.UseVisualStyleBackColor = false;
             this.Search.Click += new System.EventHandler(this.Search_Click);
+            this.Search.MouseHover += new System.EventHandler(this.Search_MouseHover);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(1212, 137);
+            this.button4.Location = new System.Drawing.Point(12, 134);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(134, 29);
             this.button4.TabIndex = 81;
@@ -142,11 +162,24 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // update
+            // 
+            this.update.BackColor = System.Drawing.Color.Lime;
+            this.update.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.update.Location = new System.Drawing.Point(1571, 687);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(99, 37);
+            this.update.TabIndex = 82;
+            this.update.Text = "Update";
+            this.update.UseVisualStyleBackColor = false;
+            this.update.Click += new System.EventHandler(this.update_Click);
+            // 
             // MasterData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1824, 751);
+            this.Controls.Add(this.update);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.txtSearch);
@@ -178,5 +211,7 @@
         private TextBox txtSearch;
         private Button Search;
         private Button button4;
+        private ToolTip toolTip1;
+        private Button update;
     }
 }

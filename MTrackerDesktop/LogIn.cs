@@ -102,6 +102,7 @@ namespace MTrackerDesktop
             
             frmRegistration form = new frmRegistration();
             form.Show();
+            
         }
 
         private void LogIn_Load(object sender, EventArgs e)

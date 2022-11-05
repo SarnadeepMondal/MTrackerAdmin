@@ -205,7 +205,7 @@ namespace MTrackerDesktop
         {
             //logout button
 
-            this.Close();
+            this.Hide();
             LogIn inw = new LogIn();
             inw.Show();
         }
@@ -231,6 +231,17 @@ namespace MTrackerDesktop
         private void OrgID_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void button3_MouseHover(object sender, EventArgs e)
+        {
+
+            toolTip1.Show("Logout", button3);
+        }
+
+        private void button4_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Logout", button4);
         }
     }
 }
